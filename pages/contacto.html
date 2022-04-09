@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/images/lion.png">
+    <script src="https://kit.fontawesome.com/a2dd6420b4.js" crossorigin="anonymous"></script>
+    <title>CONTACTO</title>
+</head>
+<body  class="grid-container">
+    <header>
+        <nav class="encabezado">
+            <img src="../assets/images/lion.png" alt="logo" class="logo">
+            <ul>
+                <li> <a href="../index.html">Indice</a></li>
+                <li><a href="productos.html">Producto</a></li>
+                <li><a href="coleccionesespeciales.html">Colecciones Especiales</a></li>
+                <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button type="button" class="button">Ingreso</button>
+        </nav>
+    </header>
+    <main class="contenedorContacto">
+        <div class="contenedorContacto__hijo1">
+            <h2>Estamos para Ayudarte</h2>
+            <p>Si tienes alguna consulta, no dudes en escribirnos, nos pondremos en contacto contigo lo antes posible</p>
+            <form action="procesar.php" method="get" enctype="application/x-www-form-urlencoded" class="formulario">
+
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" placeholder="Ingresa tu nombre" required><br><br>
+
+                <label for="email">Correo Electrónico</label><br>
+                <input type="email" name="email" placeholder="Ingresa tu correo electrónico"><br><br>
+
+                <label for="telefono">Teléfono</label><br>
+                <input type="tel" name="telefono" placeholder="Ingresa tu número telefónico" required><br><br>
+
+                <label for="pais">País</label><br>
+                <input type="text" name="pais" placeholder="Ingresa País" required><br><br>
+
+                <label for="cuadrodetexto">¿Como podemos Ayudarle?</label><br>
+                <textarea name="cuadrodetexto" cols="20" rows="10"></textarea><br>
+
+                <input type="submit" value="Enviar Formulario">
+                <input type="reset" value="Borra Formulario"> 
+                <input type="button" value="Sin Acciones">                
+            </form>    
+        </div>
+        <div class="contenedorContacto__hijo2">
+            <p class="titulocontacto">COCK AND LION</p>
+            <p>Montevideo, Uruguay</p>
+            <p>+59899XXXXXX</p>
+            <img src="../assets/images/imgfondo.jpg" alt="abrazo">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere similique ducimus, dolor recusandae neque obcaecati quas reprehenderit ratione ad laboriosam commodi quo ab expedita doloremque quod autem asperiores modi magnam?</p>    
+        </div>
+    </main>
+    <footer class="pieDepagina">
+        <div>
+            <ul>
+                <li><a href="#">Nuestras Marcas</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Distribuidores Autorizados</a></li>
+            </ul>
+            <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i><a>
+            <a href="#"><i class="fa-solid fa-at fa-2x"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
