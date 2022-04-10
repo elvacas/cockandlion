@@ -11,16 +11,9 @@
 }
 
 
-header{
-    width: 100%;
-    margin: 0 0px;
-    padding: 5px 5px;
-
-}
-
 .grid-container{
     width: 100%;
-    background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)) ,url(../assets/images/imgfondo.jpg);
+    background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)) ,url(../assets/images/imgfondo.jpg);
     background-size:cover;
     background-position: center;
     display: grid;
@@ -34,40 +27,12 @@ header{
     grid-row: 1 / 2;
 }
 
-.encabezado{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 1%;
-}
-
-.logo{
-    width: 50px;
-}
-
-.encabezado ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 0 15px;
-}
-
-.encabezado ul li a{
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    list-style: none;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.encabezado ul li a:hover{
-    color: #2c7cb0;
-    transition: 0.3s;
+.nav-item{
+    margin: 0 15px;
 }
 
 .button{
-    background: beige;
+    background: white;
     padding: 10px 15px;
     color: black;
     text-decoration: none;
@@ -91,7 +56,10 @@ cursor: pointer;
     width: 95%;
     margin: 0 auto;
     padding: 5px 5px;
+}
 
+.contenedorCentral h1{
+text-align: center;
 }
 
 .contenedorCentral__hijo{
@@ -122,43 +90,10 @@ footer{
     width: 100%;
     margin: 0 auto;
     padding: 5px 5px;
-
-
-}
-
-.pieDepagina{
+    background-color: antiquewhite;
     grid-column: 1 / 4;
     grid-row: 5 / 6;
-    text-align: center;
-    
 }
-
-.pieDepagina div ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 0 15px;
-    
-}
-
-.pieDepagina div ul li a{
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    list-style: none;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.pieDepagina div ul li a:hover{
-    color: #2c7cb0;
-    transition: 0.3s;
-}
-
-.pieDepagina div a i{
-    padding: 10px 30px;
-    color: black;
-}
-
 
 
 /*PRODUCTOS*/
@@ -177,18 +112,26 @@ footer{
 
 
 /*COLECCIONES ESPECIALES*/
-.subtituloColeccion1{
-    text-align: left;
-    color: rgb(19, 163, 96);
-    width: 100%;
+
+.contenedorColecciones{
+    grid-column: 1 / 4;
+    grid-row: 2 / 5;
+    width: 30%;
+    margin: auto auto;
+    padding: 5px 5px;
 }
 
-.subtituloColeccion2{
-    text-align: left;
-    color: rgb(124, 133, 11);
-    width: 100%;
-    padding-top: 20px;
+.carousel-item {
+    height: 100vh;
 }
+
+.carousel-item p,h5{
+    color: black;
+}
+
+
+
+
 
 /*SOBRE NOSOTROS*/
 
@@ -320,4 +263,3 @@ footer{
     }
         }
 
-                /*MEDIA QUERY CONTACTO*/
