@@ -92,12 +92,14 @@ footer {
   text-align: center;
   color: purple;
   width: 100%;
+  font-weight: 800;
 }
 
 .subtituloNinos {
   text-align: center;
   color: blue;
   width: 100%;
+  font-weight: 800;
   padding-top: 50px;
 }
 
@@ -134,8 +136,9 @@ footer {
   margin-bottom: 50px;
 }
 
-.carousel-item p, h5 {
-  color: black;
+.carousel-item h5, .carousel-item p {
+  color: white;
+  font-weight: 800;
 }
 
 /*SOBRE NOSOTROS*/
@@ -211,7 +214,7 @@ footer {
   font-size: large;
 }
 
-.contenedorContacto input, textarea {
+.contenedorContacto input, .contenedorContacto textarea {
   background: beige;
   padding: 5px 10px;
   margin: 3px 3px;

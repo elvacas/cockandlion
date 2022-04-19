@@ -22,9 +22,12 @@
     grid-template-rows: auto 1fr 1fr 1fr auto;    
 }
 
-.grid-container header{
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
+
+.grid-container {
+    header{
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
 }
 
 .nav-item{
@@ -58,8 +61,10 @@ cursor: pointer;
     padding: 5px 5px;
 }
 
-.contenedorCentral h1{
-text-align: center;
+.contenedorCentral{
+    h1{
+        text-align: center;
+        }
 }
 
 .contenedorCentral__hijo{
@@ -77,9 +82,13 @@ text-align: center;
 
 }
 
-.contenedorCentral__hijo div img{
-height: 300px;
-width: auto;
+.contenedorCentral__hijo {
+    div{
+        img{
+            height: 300px;
+            width: auto;
+        }
+    }
 }
 
 
@@ -101,12 +110,14 @@ footer{
     text-align: center;
     color: purple;
     width: 100%;
+    font-weight: 800;
 }
 
 .subtituloNinos{
     text-align: center;
     color: blue;
     width: 100%;
+    font-weight: 800;
     padding-top: 50px;
 }
 
@@ -138,20 +149,18 @@ margin: 10px;
 
 #carouselExampleCaptions1{
     margin-bottom: 50px;
-
 }
 
 #carouselExampleCaptions2{
     margin-bottom: 50px;
-
 }
 
-.carousel-item p,h5{
-    color: black;
+.carousel-item{
+    h5,p{
+        color: white;
+        font-weight: 800;
+    }
 }
-
-
-
 
 
 /*SOBRE NOSOTROS*/
@@ -168,11 +177,13 @@ margin: 10px;
     display: inline-block;
 }
 
-.cajas1 img{
-    float: right;
-    padding: 10px;
 
-}
+.cajas1 {
+        img{
+            float: right;
+            padding: 10px;
+        }
+    }
 
 .cajas2{
     margin: 10px;
@@ -180,11 +191,13 @@ margin: 10px;
     display: inline-block;
 }
 
-.cajas2 img{
-    float: left;
-    padding: 10px;
-    width: 300px;
-    height: 400px;
+.cajas2 {
+        img{
+            float: left;
+            padding: 10px;
+            width: 300px;
+            height: 400px;
+        }
 }
 
 
@@ -206,8 +219,10 @@ margin: 10px;
     margin: 0 10px;
 }
 
-.contenedorContacto__hijo1 h2{
-    text-transform: uppercase;
+.contenedorContacto__hijo1 {
+        h2{
+            text-transform: uppercase;
+        }
 }
 
 .formulario{
@@ -215,35 +230,39 @@ margin: 10px;
     padding: 10px 0;
 }
 
-.contenedorContacto__hijo2{
+.contenedorContacto__hijo2 {
     width: 40%;
     margin: 0 10px;
 
 }
 
-.contenedorContacto__hijo2 img{
-    width: 300px;
-    height: auto;
-    margin: 10px;
-    padding: 0% 0;
-}
+.contenedorContacto__hijo2 {
+        img{
+            width: 300px;
+            height: auto;
+            margin: 10px;
+            padding: 0% 0;
+        }
+    }
 
 .titulocontacto{
     font-weight: bold;
     font-size: large;
 }
 
-.contenedorContacto input,textarea{
-    background: beige;
-    padding: 5px 10px;
-    margin: 3px 3px;
-    color: black;
-    text-decoration: none;
-    border: none;
-    border-radius:30px;
-    font-size: 15px;
-    font-weight: 500;
-}
+.contenedorContacto {
+        input,textarea{
+            background: beige;
+            padding: 5px 10px;
+            margin: 3px 3px;
+            color: black;
+            text-decoration: none;
+            border: none;
+            border-radius:30px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
 
 
 /*MEDIA QUERY INICIO y CONTACTO*/
