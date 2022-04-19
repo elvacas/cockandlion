@@ -1,0 +1,285 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+@font-face {
+    font-family:"Poppins" ;
+    src: url(../assets/fonts/Poppins/Poppins-Light.ttf);
+}
+
+
+.grid-container{
+    width: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)) ,url(../assets/images/imgfondo.jpg);
+    background-size:cover;
+    background-position: center;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr auto;    
+}
+
+.grid-container header{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.nav-item{
+    margin: 0 15px;
+}
+
+.button{
+    background: white;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius:30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.button:hover{
+transform: scale(1.1);
+transition: 0.3s;
+cursor: pointer;
+}
+
+/*MAIN*/
+
+.contenedorCentral{
+    grid-column: 1 / 4;
+    grid-row: 2 / 5;
+    width: 95%;
+    margin: 0 auto;
+    padding: 5px 5px;
+}
+
+.contenedorCentral h1{
+text-align: center;
+}
+
+.contenedorCentral__hijo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.cajas{
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.contenedorCentral__hijo div img{
+height: 300px;
+width: auto;
+}
+
+
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 5px;
+    background-color: antiquewhite;
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+}
+
+
+/*PRODUCTOS*/
+.subtituloNinas{
+    text-align: center;
+    color: purple;
+    width: 100%;
+}
+
+.subtituloNinos{
+    text-align: center;
+    color: blue;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.card{
+margin: 10px;
+}
+
+.card-body{
+    background-color: blanchedalmond;
+}
+
+.card-img-top{
+    transition: transform 0.5s;
+}
+
+.card-img-top:hover{
+    transform: scale(1.4);
+}
+
+/*COLECCIONES ESPECIALES*/
+
+.contenedorColecciones{
+    grid-column: 1 / 4;
+    grid-row: 2 / 5;
+    width: 30%;
+    margin: auto auto;
+    padding: 5px 5px;
+}
+
+#carouselExampleCaptions1{
+    margin-bottom: 50px;
+
+}
+
+#carouselExampleCaptions2{
+    margin-bottom: 50px;
+
+}
+
+.carousel-item p,h5{
+    color: black;
+}
+
+
+
+
+
+/*SOBRE NOSOTROS*/
+
+.subtituloNosotros{
+    text-align: center;
+    color: rgb(175, 23, 168);
+    width: 100%;
+}
+
+.cajas1{
+    margin: 10px;
+    text-align: left;
+    display: inline-block;
+}
+
+.cajas1 img{
+    float: right;
+    padding: 10px;
+
+}
+
+.cajas2{
+    margin: 10px;
+    text-align: left;
+    display: inline-block;
+}
+
+.cajas2 img{
+    float: left;
+    padding: 10px;
+    width: 300px;
+    height: 400px;
+}
+
+
+/*CONTACTO*/
+
+.contenedorContacto{
+    grid-column: 1 / 4;
+    grid-row: 2 / 5;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+.contenedorContacto__hijo1{
+    width: 50%;  
+    margin: 0 10px;
+}
+
+.contenedorContacto__hijo1 h2{
+    text-transform: uppercase;
+}
+
+.formulario{
+    width: 100%;
+    padding: 10px 0;
+}
+
+.contenedorContacto__hijo2{
+    width: 40%;
+    margin: 0 10px;
+
+}
+
+.contenedorContacto__hijo2 img{
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    padding: 0% 0;
+}
+
+.titulocontacto{
+    font-weight: bold;
+    font-size: large;
+}
+
+.contenedorContacto input,textarea{
+    background: beige;
+    padding: 5px 10px;
+    margin: 3px 3px;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius:30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/*MEDIA QUERY INICIO y CONTACTO*/
+@media screen and (max-width: 900px){
+    .encabezado ul li{
+        display: block;
+        text-align: center;
+    }
+    .pieDepagina div ul li{
+        display: block; 
+    }
+    .contenedorContacto{
+        flex-direction: column;
+        align-content:flex-start;
+    }
+    .contenedorContacto__hijo2 img{
+        width: 250px;
+        height: auto;
+    }
+
+        }
+
+
+        /*MEDIA QUERY SOBRENOSOTROS*/
+@media screen and (max-width: 620px){
+
+    .cajas1 img{
+        float: none;
+    }
+    .cajas2 img{
+        float: none;
+    }
+    .cajas1{
+        text-align: center;
+    }
+    .cajas2{
+        text-align: center;
+    }
+        }
