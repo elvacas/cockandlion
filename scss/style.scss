@@ -10,6 +10,12 @@
     src: url(../assets/fonts/Poppins/Poppins-Light.ttf);
 }
 
+/*MAPAS*/
+$mapa-color: (
+    'blanco':white,
+    'negro': black,
+    'azul': blue
+);
 
 .grid-container{
     width: 100%;
@@ -31,13 +37,27 @@
 }
 
 .nav-item{
-    margin: 0 15px;
+    margin: 0 1rem;
+}
+
+.nav-link{
+    font-size: 1rem;
+}
+
+.nav-item:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    color: blue !important;
 }
 
 .button{
-    background: white;
+    background: map-get($map: $mapa-color, $key: 'blanco');
     padding: 10px 15px;
-    color: black;
+    color: map-get($map: $mapa-color, $key: 'negro');
     text-decoration: none;
     border: none;
     border-radius:30px;
@@ -46,7 +66,7 @@
 }
 
 .button:hover{
-transform: scale(1.1);
+transform: scale(1.2);
 transition: 0.3s;
 cursor: pointer;
 }
@@ -72,14 +92,12 @@ cursor: pointer;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    
 }
 
 .cajas{
     margin: 10px;
     padding: 20px;
     text-align: center;
-
 }
 
 .contenedorCentral__hijo {
@@ -106,31 +124,31 @@ footer{
 
 
 /*PRODUCTOS*/
-.subtituloNinas{
+@mixin titulo ($color, $paddingtop) {
     text-align: center;
-    color: purple;
+    color: $color;
     width: 100%;
     font-weight: 800;
+    padding-top: $paddingtop;
+}
+
+.subtituloNinas{
+    @include titulo(purple,0);
 }
 
 .subtituloNinos{
-    text-align: center;
-    color: blue;
-    width: 100%;
-    font-weight: 800;
-    padding-top: 50px;
+    @include titulo(blue,50px);
 }
 
 .card{
 margin: 10px;
-}
-
-.card-body{
-    background-color: blanchedalmond;
+background-color: blanchedalmond;
 }
 
 .card-img-top{
     transition: transform 0.5s;
+    border-radius: 30px;
+    padding: 20px;
 }
 
 .card-img-top:hover{
@@ -157,7 +175,7 @@ margin: 10px;
 
 .carousel-item{
     h5,p{
-        color: white;
+        color: map-get($map: $mapa-color, $key: 'blanco');
         font-weight: 800;
     }
 }
@@ -186,9 +204,7 @@ margin: 10px;
     }
 
 .cajas2{
-    margin: 10px;
-    text-align: left;
-    display: inline-block;
+    @extend .cajas1;
 }
 
 .cajas2 {
@@ -215,15 +231,17 @@ margin: 10px;
 
 
 .contenedorContacto__hijo1{
-    width: 50%;  
-    margin: 0 10px;
+    width: 100%;  
+    margin: 0 auto;
+    h2{text-align: center; text-transform: uppercase;}
+
+    p{text-align: center;
+    margin: 0 5px;
+    padding: 0 5px;}
+
+    form{padding: 10px 0 10px 35%;}
 }
 
-.contenedorContacto__hijo1 {
-        h2{
-            text-transform: uppercase;
-        }
-}
 
 .formulario{
     width: 100%;
@@ -231,9 +249,9 @@ margin: 10px;
 }
 
 .contenedorContacto__hijo2 {
-    width: 40%;
-    margin: 0 10px;
-
+    width: 100%;
+    text-align: center;
+    p{margin-top: 10px;}
 }
 
 .contenedorContacto__hijo2 {
@@ -241,7 +259,6 @@ margin: 10px;
             width: 300px;
             height: auto;
             margin: 10px;
-            padding: 0% 0;
         }
     }
 
@@ -255,7 +272,7 @@ margin: 10px;
             background: beige;
             padding: 5px 10px;
             margin: 3px 3px;
-            color: black;
+            color: map-get($map: $mapa-color, $key: 'negro');
             text-decoration: none;
             border: none;
             border-radius:30px;
@@ -273,14 +290,6 @@ margin: 10px;
     }
     .pieDepagina div ul li{
         display: block; 
-    }
-    .contenedorContacto{
-        flex-direction: column;
-        align-content:flex-start;
-    }
-    .contenedorContacto__hijo2 img{
-        width: 250px;
-        height: auto;
     }
 
         }
@@ -301,4 +310,15 @@ margin: 10px;
     .cajas2{
         text-align: center;
     }
-        }
+    .contenedorContacto__hijo1{
+        form{padding: 10px 0 10px 20%;}
+    }
+        } 
+
+
+@media screen and (max-width: 500px){
+
+    .contenedorContacto__hijo1{
+        form{padding: 10px 0 10px 6%;}
+    }
+    }

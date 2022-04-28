@@ -9,6 +9,7 @@
   font-family: "Poppins";
   src: url(../assets/fonts/Poppins/Poppins-Light.ttf);
 }
+/*MAPAS*/
 .grid-container {
   width: 100%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../assets/images/imgfondo.jpg);
@@ -26,7 +27,21 @@
 }
 
 .nav-item {
-  margin: 0 15px;
+  margin: 0 1rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: blue !important;
 }
 
 .button {
@@ -41,7 +56,7 @@
 }
 
 .button:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   transition: 0.3s;
   cursor: pointer;
 }
@@ -93,6 +108,7 @@ footer {
   color: purple;
   width: 100%;
   font-weight: 800;
+  padding-top: 0;
 }
 
 .subtituloNinos {
@@ -105,14 +121,13 @@ footer {
 
 .card {
   margin: 10px;
-}
-
-.card-body {
   background-color: blanchedalmond;
 }
 
 .card-img-top {
   transition: transform 0.5s;
+  border-radius: 30px;
+  padding: 20px;
 }
 
 .card-img-top:hover {
@@ -148,21 +163,15 @@ footer {
   width: 100%;
 }
 
-.cajas1 {
+.cajas1, .cajas2 {
   margin: 10px;
   text-align: left;
   display: inline-block;
 }
 
-.cajas1 img {
+.cajas1 img, .cajas2 img {
   float: right;
   padding: 10px;
-}
-
-.cajas2 {
-  margin: 10px;
-  text-align: left;
-  display: inline-block;
 }
 
 .cajas2 img {
@@ -184,12 +193,20 @@ footer {
 }
 
 .contenedorContacto__hijo1 {
-  width: 50%;
-  margin: 0 10px;
+  width: 100%;
+  margin: 0 auto;
 }
-
 .contenedorContacto__hijo1 h2 {
+  text-align: center;
   text-transform: uppercase;
+}
+.contenedorContacto__hijo1 p {
+  text-align: center;
+  margin: 0 5px;
+  padding: 0 5px;
+}
+.contenedorContacto__hijo1 form {
+  padding: 10px 0 10px 35%;
 }
 
 .formulario {
@@ -198,15 +215,17 @@ footer {
 }
 
 .contenedorContacto__hijo2 {
-  width: 40%;
-  margin: 0 10px;
+  width: 100%;
+  text-align: center;
+}
+.contenedorContacto__hijo2 p {
+  margin-top: 10px;
 }
 
 .contenedorContacto__hijo2 img {
   width: 300px;
   height: auto;
   margin: 10px;
-  padding: 0% 0;
 }
 
 .titulocontacto {
@@ -236,20 +255,10 @@ footer {
   .pieDepagina div ul li {
     display: block;
   }
-
-  .contenedorContacto {
-    flex-direction: column;
-    align-content: flex-start;
-  }
-
-  .contenedorContacto__hijo2 img {
-    width: 250px;
-    height: auto;
-  }
 }
 /*MEDIA QUERY SOBRENOSOTROS*/
 @media screen and (max-width: 620px) {
-  .cajas1 img {
+  .cajas1 img, .cajas2 img {
     float: none;
   }
 
@@ -257,12 +266,21 @@ footer {
     float: none;
   }
 
-  .cajas1 {
+  .cajas1, .cajas2 {
     text-align: center;
   }
 
   .cajas2 {
     text-align: center;
+  }
+
+  .contenedorContacto__hijo1 form {
+    padding: 10px 0 10px 20%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contenedorContacto__hijo1 form {
+    padding: 10px 0 10px 6%;
   }
 }
 
