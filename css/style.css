@@ -245,19 +245,8 @@ footer {
   font-weight: 500;
 }
 
-/*MEDIA QUERY INICIO y CONTACTO*/
-@media screen and (max-width: 900px) {
-  .encabezado ul li {
-    display: block;
-    text-align: center;
-  }
-
-  .pieDepagina div ul li {
-    display: block;
-  }
-}
 /*MEDIA QUERY SOBRENOSOTROS*/
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 680px) {
   .cajas1 img, .cajas2 img {
     float: none;
   }
@@ -278,7 +267,7 @@ footer {
     padding: 10px 0 10px 20%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .contenedorContacto__hijo1 form {
     padding: 10px 0 10px 6%;
   }

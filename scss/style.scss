@@ -282,43 +282,30 @@ background-color: blanchedalmond;
     }
 
 
-/*MEDIA QUERY INICIO y CONTACTO*/
-@media screen and (max-width: 900px){
-    .encabezado ul li{
-        display: block;
-        text-align: center;
+/*MEDIA QUERY SOBRENOSOTROS*/
+@media screen and (max-width: 680px) {
+    .cajas1 img, .cajas2 img {
+      float: none;
     }
-    .pieDepagina div ul li{
-        display: block; 
+  
+    .cajas2 img {
+      float: none;
     }
-
-        }
-
-
-        /*MEDIA QUERY SOBRENOSOTROS*/
-@media screen and (max-width: 620px){
-
-    .cajas1 img{
-        float: none;
+  
+    .cajas1, .cajas2 {
+      text-align: center;
     }
-    .cajas2 img{
-        float: none;
+  
+    .cajas2 {
+      text-align: center;
     }
-    .cajas1{
-        text-align: center;
+  
+    .contenedorContacto__hijo1 form {
+      padding: 10px 0 10px 20%;
     }
-    .cajas2{
-        text-align: center;
+  }
+  @media screen and (max-width: 550px) {
+    .contenedorContacto__hijo1 form {
+      padding: 10px 0 10px 6%;
     }
-    .contenedorContacto__hijo1{
-        form{padding: 10px 0 10px 20%;}
-    }
-        } 
-
-
-@media screen and (max-width: 500px){
-
-    .contenedorContacto__hijo1{
-        form{padding: 10px 0 10px 6%;}
-    }
-    }
+  }
